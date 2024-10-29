@@ -1,0 +1,15 @@
+var createCounter = function(init) {
+    originalInit=init;
+    return{
+        increment:()=>{
+            return ++init;
+        },
+        decrement:()=>{
+            return --init;
+        },
+        reset:()=>{
+            init=originalInit;
+            return init;
+        }
+    }
+};
